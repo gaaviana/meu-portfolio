@@ -1,7 +1,7 @@
 function Skills(){
-    return <>
+    return <section>
     <p>Skills</p>
-    </>
+    </section>
 }
 
 export default Skills

@@ -1,7 +1,7 @@
 function Projects(){
-    return <>
+    return <section>
     <p>Projetos</p>
-    </>
+    </section>
 }
 
 export default Projects

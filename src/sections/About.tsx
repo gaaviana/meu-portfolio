@@ -1,7 +1,7 @@
 function About(){
-    return <>
+    return <section>
     <p>Sobre</p>
-    </>
+    </section>
 }
 
 export default About
