@@ -1,6 +1,6 @@
 function About(){
     return <section>
-    <p>Sobre</p>
+   
     </section>
 }
 
