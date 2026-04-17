@@ -1,3 +1,8 @@
+import Hero from './sections/Hero'
+import About from './sections/About'
+import Projects from './sections/Projects'
+import Skills from './sections/Skills'
+import Contact from './sections/Contact'
 
 function App() {
   return (
@@ -5,6 +10,11 @@ function App() {
       <h1 className="text-4xl font-bold p-10">
         Meu Portfólio 🚀
       </h1>
+      <Hero />
+      <About />
+      <Projects />
+      <Skills />
+      <Contact />
     </div>
   )
 }
