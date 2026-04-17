@@ -3,18 +3,19 @@ import About from '@/sections/About'
 import Projects from '@/sections/Projects'
 import Skills from '@/sections/Skills'
 import Contact from '@/sections/Contact'
+import Navbar from '@/layout/Navbar'
 
 function App() {
   return (
-    <div>
-      <h1>
-        Meu Portfólio 🚀
-      </h1>
+    <div className='min-h-screen overflow-x-hidden'>
+      <Navbar />
+      <main>
       <Hero />
       <About />
       <Projects />
       <Skills />
       <Contact />
+      </main>
     </div>
   )
 }
