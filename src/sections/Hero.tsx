@@ -1,6 +1,6 @@
 import AnimatedButton from "@/components/AnimatedButton"
 import Button from "@/components/Button"
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight, ChevronDown, Download } from "lucide-react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const skills = [
@@ -52,7 +52,9 @@ function Hero() {
 
                     <div className="flex flex-wrap gap-4 fade-in delay-300">
                         <Button size="lg">Contact Me <ArrowRight className="w-5 h-5" /> </Button>
-                        <AnimatedButton />
+                        <AnimatedButton>
+                            <Download className="w-5 h-5" /> Download CV 
+                        </AnimatedButton>
                     </div>
 
                     <div className="flex items-center gap-4 fade-in delay-400">
