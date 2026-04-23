@@ -1,4 +1,4 @@
-import { SpaceIcon } from "lucide-react"
+
 
 const experiencias = [
     {

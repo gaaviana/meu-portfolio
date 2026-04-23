@@ -1,5 +1,5 @@
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
-import { use, useState } from "react"
+import { useState } from "react"
 
 const depoimentos = [
     {
