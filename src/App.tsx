@@ -3,7 +3,7 @@ import About from '@/sections/About'
 import Projects from '@/sections/Projects'
 import Experience from '@/sections/Experience'
 import Contact from '@/sections/Contact'
-import Testimonials from '@/sections/Testimonials'
+/* import Testimonials from '@/sections/Testimonials' */
 import Navbar from '@/layout/Navbar'
 import Footer from './layout/Footer'
 
@@ -16,7 +16,7 @@ function App() {
       <About />
       <Projects />
       <Experience />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Contact />
       </main>
       <Footer/>
