@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 const navLinks = [
     { href: "#about", label: "Sobre" },
     { href: "#projects", label: "Projetos" },
-    { href: "#skills", label: "Habilidades" },
+    { href: "#experience", label: "Experiencias" },
 ]
 
 function Navbar() {
@@ -50,9 +50,9 @@ function Navbar() {
                 <div className="md:hidden vidro-stg fade-in">
                     <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
                         {navLinks.map((link, i) => (
-                            <a href={link.href} key={i} className="text-lg text-off-texto hover:text-texto py-2">{link.label}</a>
+                            <a href={link.href} key={i} onClick={() => setMenuAberto(false)} className="text-lg text-off-texto hover:text-texto py-2">{link.label}</a>
                         ))}
-                        <Button>Contato</Button>
+                        <Button onClick={() => setMenuAberto(false)}>Contato</Button>
                     </div>
                 </div>
             )}
