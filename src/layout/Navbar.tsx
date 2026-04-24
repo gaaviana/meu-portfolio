@@ -22,16 +22,16 @@ function Navbar() {
         return () => window.removeEventListener("scroll", Scroll)
     }, [])
     return (
-        <header className={`fixed top-0 left-0 right-0 ${scrolled ? "vidro-stg py-3" : "bg-transparent py-5"}  z-50`}>
+        <header className={`fixed top-0 left-0 right-0 ${scrolled ? "vidro-nav py-3" : "bg-transparent py-5"}  z-50`}>
             <nav className="container mx-auto px-6 flex items-center justify-between">
-                <a href="#" className="text-xl font-bold tracking-tight hover:text-cor-primaria">
+                <a href="#" className="text-xl font-bold tracking-tight text-cor-texto hover:text-cor-primaria transition-colors">
                     GA<span className="text-cor-primaria">.</span>
                 </a>
 
                 <div className="hidden md:flex items-center gap-1">
-                    <div className="vidro rounded-full px-2 py-1 flex items-center gap-1">
+                    <div className="vidro-nav-pill rounded-full px-2 py-1 flex items-center gap-1">
                         {navLinks.map((link, i) => (
-                            <a href={link.href} key={i} className="px-4 py-2 text-sm text-cor-neutro-texto hover:text-cor-texto rounded-full hover:bg-cor-superficie">{link.label}</a>
+                            <a href={link.href} key={i} className="px-4 py-2 text-sm text-cor-neutro-texto hover:text-cor-texto rounded-full border border-transparent transition-colors hover:border-cor-borda hover:bg-cor-primaria/12">{link.label}</a>
                         ))}
                     </div>
                 </div>
@@ -49,10 +49,10 @@ function Navbar() {
             </nav>
 
             {menuAberto && (
-                <div className="md:hidden vidro-stg fade-in">
+                <div className="md:hidden vidro-nav-drawer fade-in">
                     <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
                         {navLinks.map((link, i) => (
-                            <a href={link.href} key={i} onClick={() => setMenuAberto(false)} className="text-lg text-cor-neutro-texto hover:text-cor-texto py-2">{link.label}</a>
+                            <a href={link.href} key={i} onClick={() => setMenuAberto(false)} className="text-lg text-cor-neutro-texto hover:text-cor-texto py-3 px-3 -mx-3 rounded-xl border border-transparent transition-colors hover:border-cor-borda hover:bg-cor-primaria/12">{link.label}</a>
                         ))}
                         <Button
                             onClick={() => {

@@ -17,8 +17,8 @@ function Hero() {
     return <section className=" relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {[...Array(30)].map((_, i) => (
-                <div className="absolute w-1.5 h-1.5 rounded-full opacity-60" style={{
-                    backgroundColor: "#20b2a6",
+                <div className="absolute w-1.5 h-1.5 rounded-full opacity-60"                 style={{
+                    backgroundColor: "rgb(59 130 246 / 0.55)",
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
                     animation: `mov-lento ${15 + Math.random() * 20}s ease-in-out infinite`,
@@ -38,12 +38,12 @@ function Hero() {
                     </div>
 
                     <div className="space-y-4">
-                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight fade-in delay-100">
+                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight fade-in delay-100 text-cor-texto">
                             Criando <span className="text-cor-primaria text-brilha">experiências</span>
                             <br />
                             digitais com
                             <br />
-                            <span className="font-serif italic font-normal text-white">precisão.</span>
+                            <span className="font-serif italic font-normal text-cor-secundaria">precisão.</span>
                         </h1>
                         <p className="text-lg text-cor-neutro-texto max-w-lg fade-in delay-200">
                             Olá, sou Gabriel Viana — engenheiro de software especializado em React, Next.js e TypeScript. Construo aplicações web escaláveis e de alto desempenho que as pessoas adoram.
@@ -64,7 +64,7 @@ function Hero() {
                             { icon: FaLinkedin, href: "#" },
                             { icon: FaTwitter, href: "#" },
                         ].map((social, i) => (
-                            <a href={social.href} key={i} className="p-2 rounded-full vidro hover:bg-cor-primaria/10 hover:text-cor-primaria transition-all duration-300">{<social.icon className="w-5 h-5" />}</a>
+                            <a href={social.href} key={i} className="p-2 rounded-full vidro transition-all duration-300 hover:bg-cor-primaria/14 hover:text-cor-primaria hover:ring-2 hover:ring-cor-borda/90 hover:ring-offset-0">{<social.icon className="w-5 h-5" />}</a>
                         ))}
                     </div>
                 </div>
@@ -78,7 +78,7 @@ function Hero() {
                     <div className="absolute -bottom-4 -right-4 vidro rounded-xl px-4 py-3 float">
                         <div className="flex items-center gap-3">
                             <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                            <span className="text-sm font-medium">Disponível para trabalho</span>
+                            <span className="text-sm font-medium text-cor-texto">Disponível para trabalho</span>
                         </div>
                     </div>
 
@@ -99,12 +99,15 @@ function Hero() {
             </div>
         </div>
 
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 fade-in delay-800">
-            <a href="#about" className="flex flex-col items-center gap-2 text-cor-neutro-texto hover:text-cor-primaria">
-                <span className="text-xs uppercase tracking-wider">Role</span>
-                <ChevronDown className="w-6 h-6 float"/>
-            </a>
-        </div>
+            <div className="pointer-events-none absolute bottom-6 left-1/2 z-20 -translate-x-1/2 fade-in delay-800">
+                <a
+                    href="#about"
+                    className="pointer-events-auto flex cursor-pointer flex-col items-center gap-1 px-10 py-4 text-cor-neutro-texto transition-colors hover:text-cor-primaria"
+                >
+                    <span className="text-xs font-medium uppercase tracking-wider">Role</span>
+                    <ChevronDown className="h-7 w-7 float" aria-hidden />
+                </a>
+            </div>
     </section>
 }
 

@@ -1,27 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
---cor-fundo: 15 20 24;
---cor-texto: 240 242 245;
-
---cor-superficie-card: 20 26 31;
-
---cor-primaria: 32 178 166;
---cor-primaria-texto: 255 255 255;
-
---cor-secundaria: 31 40 48;
---cor-secundaria-texto: 32 178 166;
-
---cor-neutro: 37 46 55;
---cor-neutro-texto: 122 132 145;
-
---cor-borda: 36 43 50;
-
---cor-destaque: 245 166 35;
---cor-superficie: 26 35 41;
-}
+    --cor-fundo: 255 255 255;
+    --cor-texto: 15 23 42; /* quase preto azulado */
+  
+    --cor-superficie-card: 248 250 252;
+  
+    --cor-primaria: 59 130 246; /* azul moderno */
+    --cor-primaria-texto: 255 255 255;
+  
+    --cor-secundaria: 139 92 246; /* violeta */
+    --cor-secundaria-texto: 255 255 255;
+  
+    --cor-neutro: 226 232 240;
+    --cor-neutro-texto: 100 116 139;
+  
+    /* Borda um pouco mais escura que o fundo — leitura e hovers mais visíveis */
+    --cor-borda: 199 210 225;
+  
+    --cor-destaque: 236 72 153; /* rosa sutil pra criatividade */
+    --cor-superficie: 255 255 255;
+  }
 
 @layer base {
     html {
@@ -47,13 +47,36 @@
     .vidro {
          background-color: color-mix(in srgb, rgb(var(--cor-superficie)) 50%, transparent); 
        backdrop-filter: blur(16px);
-         border: 1px solid color-mix(in srgb, rgb(var(--cor-borda)) 50%, transparent);
+         border: 1px solid color-mix(in srgb, rgb(var(--cor-borda)) 78%, transparent);
     }
 
     .vidro-stg {
          background-color: color-mix(in srgb, rgb(var(--cor-superficie)) 80%, transparent); 
        backdrop-filter: blur(16px);
-         border: 1px solid color-mix(in srgb, rgb(var(--cor-borda)) 60%, transparent);
+         border: 1px solid color-mix(in srgb, rgb(var(--cor-borda)) 82%, transparent);
+    }
+
+    /* Navbar: vidro com blur mais forte (só usado no layout Navbar) */
+    .vidro-nav {
+        background-color: color-mix(in srgb, rgb(var(--cor-superficie)) 52%, transparent);
+        backdrop-filter: blur(32px) saturate(1.35);
+        -webkit-backdrop-filter: blur(32px) saturate(1.35);
+        border-bottom: 1px solid color-mix(in srgb, rgb(var(--cor-borda)) 88%, transparent);
+        box-shadow: 0 1px 0 color-mix(in srgb, rgb(var(--cor-texto)) 6%, transparent);
+    }
+
+    .vidro-nav-pill {
+        background-color: color-mix(in srgb, rgb(var(--cor-superficie)) 48%, transparent);
+        backdrop-filter: blur(32px) saturate(1.35);
+        -webkit-backdrop-filter: blur(32px) saturate(1.35);
+        border: 1px solid color-mix(in srgb, rgb(var(--cor-borda)) 85%, transparent);
+    }
+
+    .vidro-nav-drawer {
+        background-color: color-mix(in srgb, rgb(var(--cor-superficie)) 52%, transparent);
+        backdrop-filter: blur(32px) saturate(1.35);
+        -webkit-backdrop-filter: blur(32px) saturate(1.35);
+        border-top: 1px solid color-mix(in srgb, rgb(var(--cor-borda)) 85%, transparent);
     }
 
     .text-brilha {
@@ -78,7 +101,7 @@
         to {
             opacity: 1;
             transform: translateY(0);
-            ilter: blur(0);
+            filter: blur(0);
         }
     }
 
@@ -162,9 +185,9 @@
    }
 
    .animacao-borda:hover{
-    background-color: color-mix(in srgb, #26c4b8 15%, transparent);
+    background-color: color-mix(in srgb, rgb(var(--cor-primaria)) 12%, transparent);
     backdrop-filter: blur(16px);
-    box-shadow: 0 0 20px color-mix(in srgb, #26c4b8 20%, transparent);
+    box-shadow: 0 0 20px color-mix(in srgb, rgb(var(--cor-primaria)) 22%, transparent);
    }
 
     .linha-do-tempo {

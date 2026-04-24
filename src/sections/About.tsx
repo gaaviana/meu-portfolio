@@ -29,11 +29,11 @@ function About() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
                 <div className="space-y-8">
                     <div className="fade-in">
-                        <span className="text-cor-secundaria-texto text-sm font-medium tracking-wider uppercase">Sobre mim</span>
+                        <span className="text-cor-secundaria text-sm font-medium tracking-wider uppercase">Sobre mim</span>
                     </div>
-                    <h2 className="text-4xl md:text-5xl font-bold leading-tight fade-in delay-100 text-cor-secundaria-texto">
+                    <h2 className="text-4xl md:text-5xl font-bold leading-tight fade-in delay-100 text-cor-texto">
                         Construindo o futuro,
-                        <span className="font-serif italic font-normal text-white"> um componente de cada vez.</span>
+                        <span className="font-serif italic font-normal text-cor-secundaria"> um componente de cada vez.</span>
                     </h2>
                     <div className="space-y-4 text-cor-neutro-texto fade-in delay-200">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit massa turpis. Donec pulvinar molestie sem, a consequat risus vulputate sed. Etiam tortor risus, laoreet at arcu et, fringilla dictum dui. In eget neque accumsan erat vestibulum ultricies. Duis a facilisis tortor. Donec at massa sapien.</p>
@@ -52,7 +52,7 @@ function About() {
                             animationDelay: `${(i + 1) * 100}ms`
                         }}>
                             <div className="w-12 h-12 rounded-xl bg-cor-primaria/10 flex justify-center items-center mb-4 hover:bg-cor-primaria/20"><item.icon className="w-6 h-6 text-cor-primaria" /></div>
-                            <h3 className="text-lg font-semibold mb-2">{item.titulo}</h3>
+                            <h3 className="text-lg font-semibold mb-2 text-cor-texto">{item.titulo}</h3>
                             <p className="text-sm text-cor-neutro-texto">{item.descricao}</p>
                         </div>
                     ))}
