@@ -2,6 +2,7 @@ import Button from "@/components/Button"
 import emailjs from "@emailjs/browser"
 import { AlertCircle, CheckCircle, Mail, MapPin, Phone, Send } from "lucide-react"
 import { useState } from "react"
+import { FaWhatsapp } from "react-icons/fa"
 
 const infosContato = [
     {
@@ -15,6 +16,12 @@ const infosContato = [
         label: "Telefone",
         value: "+55 11 97836-0876",
         href: "tel:+5511978360876",
+    },
+    {
+        icon: FaWhatsapp,
+        label: "WhatsApp",
+        value: "11978360876",
+        href: "https://wa.me/5511978360876?text=Olá! Vi seu portfólio e gostaria de falar com você."
     },
     {
         icon: MapPin,
@@ -86,7 +93,7 @@ function Contact() {
                 <span className="text-cor-secundaria text-sm font-medium -tracking-wider uppercase fade-in">Entre em contato</span>
                 <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 fade-in delay-100 text-cor-texto">Vamos construir <span className="font-serif italic font-normal text-cor-secundaria">algo incrível.</span></h2>
                 <p className="text-cor-neutro-texto fade-in delay-200">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit massa turpis. Donec pulvinar molestie sem, a consequat risus vulputate sed. Etiam tortor risus.
+                    Disponível para projetos e oportunidades em desenvolvimento de software. Entre em contato para colaborarmos.
                 </p>
             </div>
 
@@ -143,7 +150,7 @@ function Contact() {
                         </h3>
                         <div className="space-y-4">
                             { infosContato.map((info, i) => (
-                                <a key={i} href={info.href} className="flex items-center gap-4 rounded-xl border border-transparent p-3 transition-colors hover:border-cor-borda hover:bg-cor-primaria/10 hover:shadow-sm">
+                                <a key={i} href={info.href} target="blank" className="flex items-center gap-4 rounded-xl border border-transparent p-3 transition-colors hover:border-cor-borda hover:bg-cor-primaria/10 hover:shadow-sm">
                                     <div className="w-12 h-12 rounded-xl bg-cor-primaria/10 flex items-center justify-center">
                                         <info.icon className="w-5 h-5 text-cor-primaria "/>
                                     </div>

@@ -25,7 +25,7 @@ function Navbar() {
         <header className={`fixed top-0 left-0 right-0 ${scrolled ? "vidro-nav py-3" : "bg-transparent py-5"}  z-50`}>
             <nav className="container mx-auto px-6 flex items-center justify-between">
                 <a href="#" className="text-xl font-bold tracking-tight text-cor-texto hover:text-cor-primaria transition-colors">
-                    GA<span className="text-cor-primaria">.</span>
+                    GVP<span className="text-cor-primaria">.</span>
                 </a>
 
                 <div className="hidden md:flex items-center gap-1">

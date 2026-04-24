@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
+import { FaGithub, FaInstagram, FaLinkedin, } from "react-icons/fa"
 
 const footerLinks = [
     { href: "#about", label: "Sobre" },
@@ -7,9 +7,9 @@ const footerLinks = [
 ]
 
 const socialLinks = [
-    { icon: FaGithub, href: "#", label: "Github" },
-    { icon: FaLinkedin, href: "#", label: "LinkedIn" },
-    { icon: FaTwitter, href: "#", label: "Twitter" },
+    { icon: FaGithub, href: "https://github.com/gaaviana", label: "Github" },
+    { icon: FaLinkedin, href: "https://www.linkedin.com/in/gabriel-viana-paulino-281198326/", label: "LinkedIn" },
+    { icon: FaInstagram, href: "https://www.instagram.com/viana.gaab?igsh=bDhhYjVveHpyam0=", label: "Instagram" },
 ]
 
 function Footer() {
@@ -22,7 +22,7 @@ function Footer() {
 
           <div className="text-center md:text-left">
             <a href="#" className="text-xl font-bold tracking-tight text-cor-texto hover:text-cor-primaria transition-colors">
-              GA<span className="text-cor-primaria">.</span>
+              GVP<span className="text-cor-primaria">.</span>
             </a>
             <p className="text-sm text-cor-neutro-texto mt-2">
               © {currentYear} Gabriel Viana. Todos os direitos reservados.

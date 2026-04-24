@@ -1,23 +1,31 @@
 import AnimatedButton from "@/components/AnimatedButton"
 import Button from "@/components/Button"
 import { ArrowRight, ChevronDown, Download } from "lucide-react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const skills = [
-    "Batata",
-    "Batata",
-    "Batata",
-    "Batata",
-    "Batata",
-    "Batata",
-    "Batata",
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Tailwind CSS",
+    "PHP (POO)",
+    "MySQL",
+    "UI/UX Design",
+    "Figma",
+    "Prototipagem",
+    "Acessibilidade (WCAG)",
+    "Desenvolvimento Fullstack",
+    "Integração com APIs",
+    "Modelagem de Banco de Dados"
 ]
 
 function Hero() {
     return <section className=" relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {[...Array(30)].map((_, i) => (
-                <div className="absolute w-1.5 h-1.5 rounded-full opacity-60"                 style={{
+                <div className="absolute w-1.5 h-1.5 rounded-full opacity-60" style={{
                     backgroundColor: "rgb(59 130 246 / 0.55)",
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
@@ -46,33 +54,39 @@ function Hero() {
                             <span className="font-serif italic font-normal text-cor-secundaria">precisão.</span>
                         </h1>
                         <p className="text-lg text-cor-neutro-texto max-w-lg fade-in delay-200">
-                            Olá, sou Gabriel Viana — engenheiro de software especializado em React, Next.js e TypeScript. Construo aplicações web escaláveis e de alto desempenho que as pessoas adoram.
+                            Olá, sou Gabriel Viana — engenheiro de software focado na criação de aplicações web escaláveis, eficientes e com ótima experiência para o usuário. Desenvolvo soluções que unem desempenho, qualidade e usabilidade, sempre buscando entregar produtos que realmente fazem a diferença para as pessoas.
                         </p>
                     </div>
 
                     <div className="flex flex-wrap gap-4 fade-in delay-300">
-                        <Button size="lg">Entrar em contato <ArrowRight className="w-5 h-5" /> </Button>
-                        <AnimatedButton>
-                            <Download className="w-5 h-5" /> Baixar CV 
-                        </AnimatedButton>
+                        <Button size="lg" onClick={() => {
+                            document.getElementById("contact")?.scrollIntoView({
+                                behavior: "smooth"
+                            })
+                        }}>Entrar em contato <ArrowRight className="w-5 h-5" /> </Button>
+                        <a href="/CurriculoGabriel.pdf" download>
+                            <AnimatedButton>
+                                <Download className="w-5 h-5" /> Baixar CV
+                            </AnimatedButton>
+                        </a>
                     </div>
 
-                        <div className="flex items-center gap-4 fade-in delay-400">
+                    <div className="flex items-center gap-4 fade-in delay-400">
                         <span className="text-sm text-cor-neutro-texto">Siga: </span>
                         {[
-                            { icon: FaGithub, href: "#" },
-                            { icon: FaLinkedin, href: "#" },
-                            { icon: FaTwitter, href: "#" },
+                            { icon: FaGithub, href: "https://github.com/gaaviana" },
+                            { icon: FaLinkedin, href: "https://www.linkedin.com/in/gabriel-viana-paulino-281198326/" },
+                            { icon: FaInstagram, href: "https://www.instagram.com/viana.gaab?igsh=bDhhYjVveHpyam0=" },
                         ].map((social, i) => (
-                            <a href={social.href} key={i} className="p-2 rounded-full vidro transition-all duration-300 hover:bg-cor-primaria/14 hover:text-cor-primaria hover:ring-2 hover:ring-cor-borda/90 hover:ring-offset-0">{<social.icon className="w-5 h-5" />}</a>
+                            <a href={social.href} target="_blank" rel="noopener noreferrer" key={i} className="p-2 rounded-full vidro transition-all duration-300 hover:bg-cor-primaria/14 hover:text-cor-primaria hover:ring-2 hover:ring-cor-borda/90 hover:ring-offset-0">{<social.icon className="w-5 h-5" />}</a>
                         ))}
                     </div>
                 </div>
 
-                    <div className="relative max-w-md mx-auto">
+                <div className="relative max-w-md mx-auto">
                     <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-cor-primaria/30 via-transparent to-cor-primaria/10 blur-2xl animate-pulse" />
                     <div className="relative vidro rounded-3xl p-2 borda-brilha">
-                        <img src="/projects/foto-perfil.png" alt="Gabriel Viana Paulino" className="w-full aspect-[4/5] object-cover rounded-2xl" />
+                        <img src="/projects/foto-perfil.jpeg" alt="Gabriel Viana Paulino" className="w-full aspect-[4/5] object-cover rounded-2xl" />
                     </div>
 
                     <div className="absolute -bottom-4 -right-4 vidro rounded-xl px-4 py-3 float">
@@ -81,15 +95,15 @@ function Hero() {
                             <span className="text-sm font-medium text-cor-texto">Disponível para trabalho</span>
                         </div>
                     </div>
-
+                    {/* 
                     <div className="absolute -top-4 -left-4 vidro rounded-xl px-4 py-3 float delay-500">
                         <div className="text-2xl font-bold text-cor-primaria">5+</div>
                         <div className="text-sm text-cor-neutro-texto">Anos de experiência</div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 
-                <div className="mt-20 fade-in delay-600">
+            <div className="mt-20 fade-in delay-600">
                 <p className="text-sm text-cor-neutro-texto mb-6 text-center">Tecnologias com as quais trabalho</p>
                 <div className="relative overflow-hidden">
                     <div className="flex carrossel ">{[...skills, ...skills].map((skill, i) => (
@@ -99,15 +113,15 @@ function Hero() {
             </div>
         </div>
 
-            <div className="pointer-events-none absolute bottom-6 left-1/2 z-20 -translate-x-1/2 fade-in delay-800">
-                <a
-                    href="#about"
-                    className="pointer-events-auto flex cursor-pointer flex-col items-center gap-1 px-10 py-4 text-cor-neutro-texto transition-colors hover:text-cor-primaria"
-                >
-                    <span className="text-xs font-medium uppercase tracking-wider">Role</span>
-                    <ChevronDown className="h-7 w-7 float" aria-hidden />
-                </a>
-            </div>
+        <div className="pointer-events-none absolute bottom-6 left-1/2 z-20 -translate-x-1/2 fade-in delay-800">
+            <a
+                href="#about"
+                className="pointer-events-auto flex cursor-pointer flex-col items-center gap-1 px-10 py-4 text-cor-neutro-texto transition-colors hover:text-cor-primaria"
+            >
+                <span className="text-xs font-medium uppercase tracking-wider">Role</span>
+                <ChevronDown className="h-7 w-7 float" aria-hidden />
+            </a>
+        </div>
     </section>
 }
 

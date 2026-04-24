@@ -4,22 +4,22 @@ const destaque = [
     {
         icon: Code2,
         titulo: "Código Limpo",
-        descricao: "faucibus augue. Fusce fringilla neque metus, quis viverra dolor egestas ut."
+        descricao: "Valorizo a escrita de código claro, organizado e de fácil manutenção. Acredito que um bom código não é apenas funcional, mas também compreensível e sustentável a longo prazo."
     },
     {
         icon: Rocket,
         titulo: "Desempenho",
-        descricao: "faucibus augue. Fusce fringilla neque metus, quis viverra dolor egestas ut."
+        descricao: "Busco desenvolver aplicações rápidas e eficientes, otimizando recursos e garantindo uma experiência fluida para o usuário em diferentes contextos."
     },
     {
         icon: Users,
         titulo: "Colaboração",
-        descricao: "faucibus augue. Fusce fringilla neque metus, quis viverra dolor egestas ut."
+        descricao: "Trabalho bem em equipe, compartilhando conhecimento e contribuindo para um ambiente produtivo. Acredito que boas soluções surgem da troca de ideias."
     },
     {
         icon: Lightbulb,
         titulo: "Inovação",
-        descricao: "faucibus augue. Fusce fringilla neque metus, quis viverra dolor egestas ut."
+        descricao: "Estou sempre em busca de aprender novas abordagens e tecnologias, explorando formas criativas de resolver problemas e melhorar produtos digitais."
     },
 ]
 
@@ -36,13 +36,13 @@ function About() {
                         <span className="font-serif italic font-normal text-cor-secundaria"> um componente de cada vez.</span>
                     </h2>
                     <div className="space-y-4 text-cor-neutro-texto fade-in delay-200">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit massa turpis. Donec pulvinar molestie sem, a consequat risus vulputate sed. Etiam tortor risus, laoreet at arcu et, fringilla dictum dui. In eget neque accumsan erat vestibulum ultricies. Duis a facilisis tortor. Donec at massa sapien.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit massa turpis. Donec pulvinar molestie sem, a consequat risus vulputate sed. Etiam tortor risus, laoreet at arcu et, fringilla dictum dui. In eget neque accumsan erat vestibulum ultricies. Duis a facilisis tortor. Donec at massa sapien.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit massa turpis. Donec pulvinar molestie sem, a consequat risus vulputate sed. Etiam tortor risus, laoreet at arcu et, fringilla dictum dui. In eget neque accumsan erat vestibulum ultricies. Duis a facilisis tortor. Donec at massa sapien.</p>
+                        <p>Sou Gabriel Viana, engenheiro de software apaixonado por transformar ideias em soluções digitais reais. Tenho experiência no desenvolvimento de aplicações web, sempre buscando unir desempenho, organização e uma boa experiência para o usuário final.</p>
+                        <p>Ao longo da minha trajetória, venho desenvolvendo projetos próprios e acadêmicos que envolvem desde a criação de interfaces até a estruturação de sistemas completos, incluindo banco de dados e integrações. Esse processo tem fortalecido minha base técnica e minha capacidade de pensar soluções de forma mais estratégica.</p>
+                        <p>Também já trabalhei com funcionalidades como autenticação de usuários, gerenciamento de dados e integração com serviços externos, sempre com foco em criar aplicações funcionais, bem estruturadas e preparadas para evoluir.</p>
                     </div>
 
                     <div className="vidro rounded-2xl p-6 borda-brilha fade-in delay-300">
-                        <p className="text-lg font-medium italic text-cor-texto">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit massa turpis. Donec pulvinar molestie sem, a consequat risus vulputate sed. Etiam tortor risus, laoreet at arcu et, fringilla dictum dui. In eget neque accumsan erat vestibulum ultricies. Duis a facilisis tortor. Donec at massa sapien."</p>
+                        <p className="text-lg font-medium italic text-cor-texto">"Além da parte técnica, valorizo muito o aprendizado contínuo e o trabalho em equipe. Acredito que tecnologia vai além de código — é sobre resolver problemas reais e criar experiências que realmente impactam as pessoas."</p>
                     </div>
 
                 </div>
