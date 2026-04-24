@@ -3,23 +3,23 @@
 @tailwind utilities;
 :root {
     --cor-fundo: 255 255 255;
-    --cor-texto: 15 23 42; /* quase preto azulado */
+    --cor-texto: 15 23 42; 
   
     --cor-superficie-card: 248 250 252;
   
-    --cor-primaria: 59 130 246; /* azul moderno */
+    --cor-primaria: 59 130 246; 
     --cor-primaria-texto: 255 255 255;
   
-    --cor-secundaria: 139 92 246; /* violeta */
+    --cor-secundaria: 139 92 246;
     --cor-secundaria-texto: 255 255 255;
   
     --cor-neutro: 226 232 240;
     --cor-neutro-texto: 100 116 139;
   
-    /* Borda um pouco mais escura que o fundo — leitura e hovers mais visíveis */
+   
     --cor-borda: 199 210 225;
   
-    --cor-destaque: 236 72 153; /* rosa sutil pra criatividade */
+    --cor-destaque: 236 72 153; 
     --cor-superficie: 255 255 255;
   }
 
@@ -56,7 +56,7 @@
          border: 1px solid color-mix(in srgb, rgb(var(--cor-borda)) 82%, transparent);
     }
 
-    /* Navbar: vidro com blur mais forte (só usado no layout Navbar) */
+    
     .vidro-nav {
         background-color: color-mix(in srgb, rgb(var(--cor-superficie)) 52%, transparent);
         backdrop-filter: blur(32px) saturate(1.35);
